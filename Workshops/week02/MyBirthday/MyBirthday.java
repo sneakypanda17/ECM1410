@@ -11,6 +11,6 @@ public class MyBirthday {
         Scanner input = new Scanner(System.in);
         System.out.println("Input your birthday date:");
         myBirthdayDate = input.nextInt();
-        
+        System.out.println(myBirthdayDate);
     }
 }
