@@ -5,12 +5,15 @@ public class MyBirthday {
      * @param args
      */
     public static void main(String[] args) {
-        int myBirthdayDate;
-        int myBirthdayDay;
-        final int daysInAWeek = 7;
-        Scanner input = new Scanner(System.in);
-        System.out.println("Input your birthday date:");
-        myBirthdayDate = input.nextInt();
-        System.out.println(myBirthdayDate);
+        try (Scanner input = new Scanner(System.in)) {
+            int currentDate = 23;
+            int currentDay = 2;
+            final int daysInAWeek = 7;
+            System.out.println("Input your birthday date:");
+            int myBirthdayDate = input.nextInt();
+            int myBirthdayDay = (myBirthdayDate-currentDate)%daysInAWeek+currentDay;
+            myBirthdayDay = myBirthdayDay%daysInAWeek;
+            System.out.println("Your birthday is on day: " + myBirthdayDay + " of the week");
+        }
     }
 }
